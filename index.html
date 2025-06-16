@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eloa - Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3b82f6;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }
+        .wave {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+        @keyframes wave-animation {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold gradient-text">Eloa</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-500 transition">Início</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-500 transition">Sobre</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-500 transition">Habilidades</a>
+                    <a href="#projects" class="text-gray-700 hover:text-indigo-500 transition">Projetos</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-500 transition">Contato</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-500 transition">Início</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-500 transition">Sobre</a>
+            <a href="#skills" class="block py-2 text-gray-700 hover:text-indigo-500 transition">Habilidades</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-indigo-500 transition">Projetos</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-500 transition">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Olá, eu sou <span class="gradient-text">Eloa</span> <span class="wave">👋</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
+                    <div class="typewriter">Desenvolvedora Júnior</div>
+                </h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Uma jovem programadora de 16 anos apaixonada por criar soluções digitais inovadoras e funcionais.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
+                        Me Contate
+                    </a>
+                    <a href="#projects" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                        Meus Projetos
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 rounded-full bg-gradient-to-r from-blue-100 to-indigo-200 flex items-center justify-center shadow-xl">
+                    <i class="fas fa-code text-8xl text-indigo-500"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-48 h-48 rounded-full bg-gradient-to-r from-purple-100 to-pink-200 flex items-center justify-center shadow-lg">
+                        <i class="fas fa-user-graduate text-6xl text-purple-500"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Quem sou eu?</h3>
+                    <p class="text-gray-600 mb-4">
+                        Meu nome é Eloa, tenho 16 anos e sou uma jovem desenvolvedora apaixonada por tecnologia. Desde que descobri o mundo da programação, tenho me dedicado a aprender e criar projetos que solucionam problemas do dia a dia.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Acredito que a tecnologia tem o poder de transformar vidas e estou comprometida em usar minhas habilidades para fazer a diferença. Mesmo sendo jovem, busco constantemente desafios que me permitam crescer profissionalmente.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Quando não estou codando, gosto de estudar sobre novas tecnologias, participar de comunidades de desenvolvedores e compartilhar conhecimento com outras pessoas.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-birthday-cake text-pink-500 mr-2"></i>
+                            <span>16 anos</span>
+                        </div>
+                        <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            <span>Brasil</span>
+                        </div>
+                        <div class="bg-white px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="fas fa-code text-indigo-500 mr-2"></i>
+                            <span>Desenvolvedora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Minhas Habilidades</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTML5</h3>
+                    <p class="text-gray-600">Estruturação semântica de páginas web com acessibilidade.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-blue-400 text-4xl mb-4">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">CSS3</h3>
+                    <p class="text-gray-600">Estilização criativa com layouts responsivos e animações.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-blue-400 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-yellow-500 text-4xl mb-4">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-600">Interatividade e lógica para aplicações web dinâmicas.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-yellow-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-cyan-500 text-4xl mb-4">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">React</h3>
+                    <p class="text-gray-600">Desenvolvimento de interfaces modernas com componentes reutilizáveis.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-cyan-500 h-2 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-green-500 text-4xl mb-4">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Node.js</h3>
+                    <p class="text-gray-600">Desenvolvimento back-end com JavaScript no servidor.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-green-500 h-2 rounded-full" style="width: 65%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-gray-800 text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Banco de Dados</h3>
+                    <p class="text-gray-600">Modelagem e consultas em bancos relacionais e não-relacionais.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-gray-800 h-2 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-purple-500 text-4xl mb-4">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Git</h3>
+                    <p class="text-gray-600">Controle de versão e colaboração em projetos.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition transform hover:scale-105">
+                    <div class="text-pink-500 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Responsividade</h3>
+                    <p class="text-gray-600">Design adaptável para todos os dispositivos.</p>
+                    <div class="mt-4 bg-gray-200 rounded-full h-2">
+                        <div class="bg-pink-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Meus Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-indigo-200 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-indigo-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Site Pessoal</h3>
+                        <p class="text-gray-600 mb-4">Meu primeiro site pessoal desenvolvido com HTML, CSS e JavaScript puro.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-purple-100 to-pink-200 flex items-center justify-center">
+                        <i class="fas fa-tasks text-6xl text-purple-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Lista de Tarefas</h3>
+                        <p class="text-gray-600 mb-4">Aplicativo de lista de tarefas com armazenamento local e filtros.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-green-100 to-teal-200 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-green-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chatbot Simples</h3>
+                        <p class="text-gray-600 mb-4">Chatbot básico desenvolvido com Node.js e integração web.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Node.js</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-red-100 to-orange-200 flex items-center justify-center">
+                        <i class="fas fa-gamepad text-6xl text-red-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Jogo da Memória</h3>
+                        <p class="text-gray-600 mb-4">Jogo da memória com temas personalizáveis e contador de movimentos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-yellow-100 to-amber-200 flex items-center justify-center">
+                        <i class="fas fa-weather-sunny text-6xl text-yellow-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">App de Clima</h3>
+                        <p class="text-gray-600 mb-4">Aplicativo de previsão do tempo usando API pública.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">API</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-indigo-100 to-purple-200 flex items-center justify-center">
+                        <i class="fas fa-blog text-6xl text-indigo-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Blog Pessoal</h3>
+                        <p class="text-gray-600 mb-4">Blog desenvolvido com React e Firebase para armazenamento.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-100 text-cyan-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-3 py-1 rounded-full">Firebase</span>
+                        </div>
+                        <a href="#" class="text-indigo-500 font-medium hover:underline">Ver Projeto →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-indigo-500 text-indigo-500 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 transition">
+                    Ver Todos os Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 gradient-text">Entre em Contato</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Vamos conversar!</h3>
+                    <p class="text-gray-600 mb-8">
+                        Estou sempre aberta a novas oportunidades, colaborações ou apenas para bater um papo sobre tecnologia. Sinta-se à vontade para me enviar uma mensagem!
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">eloa.dev@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-github text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">GitHub</h4>
+                                <p class="text-gray-600">github.com/eloa-dev</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-400 p-3 rounded-full mr-4 text-white">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">LinkedIn</h4>
+                                <p class="text-gray-600">linkedin.com/in/eloa-dev</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="seu@email.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Qual o assunto?">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Sua mensagem..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition shadow-lg">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold gradient-text">Eloa</span>
+                    <p class="text-gray-400 mt-2">Desenvolvedora Júnior | 16 anos</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-800 my-8">
+            <div class="text-center text-gray-400">
+                <p>&copy; 2023 Eloa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
